@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to top left, blue, olive);
+  width: 100vw;
+  height: 100vh;
+}
+
+.game-board {
+  position: relative;
+  width: 800px;
+  height: 550px;
+  background-color: white;
+  left: 20%;
+  top: 10%;
+  /* opacity: 0.6; */
+  border-radius: 5px;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  gap: 400px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.player-0-current,
+.player-1-current {
+  margin-top: 100px;
+  width: 120px;
+  height: 80px;
+  background-color: darkcyan;
+  text-align: center;
+  padding-top: 13px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.player-0-point,
+.player-1-point {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.player-0-current-point,
+.player-1-current-point {
+  font-size: 2rem;
+}
+
+.player-0 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 110, 179);
+  width: 50%;
+  height: 100%;
+  opacity: 0.6;
+  transform: translateY(-18px);
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+.player-1 {
+  position: absolute;
+  left: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(28, 114, 62);
+  transform: translate(-20px, -18px);
+  border-radius: 5px;
+}
+
+.new-game,
+.hold,
+.roll-dice {
+  padding: 20px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+}
+
+.dice-img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 160px;
+  left: 350px;
+  z-index: 2;
+}
+
+.new-game:hover,
+.hold:hover,
+.roll-dice:hover {
+  opacity: 0.9;
+  background-color: aquamarine;
+}
+
+.new-game {
+  left: 340px;
+  top: 50px;
+}
+
+.hold {
+  top: 380px;
+  left: 350px;
+}
+
+.roll-dice {
+  top: 300px;
+  left: 340px;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: dodgerblue;
+  opacity: 0.8;
+}
